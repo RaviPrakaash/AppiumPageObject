@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24642" started-at="2018-04-07T11:41:03Z" finished-at="2018-04-07T11:41:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24642" started-at="2018-04-07T11:41:03Z" finished-at="2018-04-07T11:41:28Z">
+      <class name="wibmo.app.testScripts.ProfileManagement.KYC_003">
+        <test-method status="PASS" signature="executeCleanUpFile()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="executeCleanUpFile" is-config="true" duration-ms="16" started-at="2018-04-07T17:11:03Z" finished-at="2018-04-07T17:11:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeCleanUpFile -->
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="launchApplication" is-config="true" duration-ms="20558" started-at="2018-04-07T17:11:03Z" finished-at="2018-04-07T17:11:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method status="PASS" signature="startMethod()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-07T17:11:24Z" finished-at="2018-04-07T17:11:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="FAIL" signature="KYC_003()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="KYC_003" duration-ms="4063" started-at="2018-04-07T17:11:24Z" finished-at="2018-04-07T17:11:28Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/openqa/selenium/support/FindBy$FindByBuilder]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/openqa/selenium/support/FindBy$FindByBuilder
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildDefaultBy(DefaultElementByBuilder.java:99)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:215)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:65)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:52)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at wibmo.app.pagerepo.BasePage.<init>(BasePage.java:180)
+	at wibmo.app.pagerepo.WelcomePage.<init>(WelcomePage.java:121)
+	at wibmo.app.testScripts.BaseTest1.gotoVerifyMobile(BaseTest1.java:615)
+	at wibmo.app.testScripts.BaseTest1.registerMobileNumber(BaseTest1.java:936)
+	at wibmo.app.testScripts.ProfileManagement.KYC_003.KYC_003(KYC_003.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.support.FindBy$FindByBuilder
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KYC_003 -->
+        <test-method status="PASS" signature="postConditionUnregister()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="postConditionUnregister" is-config="true" duration-ms="0" started-at="2018-04-07T17:11:28Z" finished-at="2018-04-07T17:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditionUnregister -->
+        <test-method status="PASS" signature="updateResults()[pri:0, instance:wibmo.app.testScripts.ProfileManagement.KYC_003@1952a2d]" name="updateResults" is-config="true" duration-ms="0" started-at="2018-04-07T17:11:28Z" finished-at="2018-04-07T17:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResults -->
+      </class> <!-- wibmo.app.testScripts.ProfileManagement.KYC_003 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="wibmo.app.testScripts.ProfileManagement.KYC_003">
+        <methods>
+          <include name="startMethod"/>
+          <include name="postConditionUnregister"/>
+          <include name="KYC_003"/>
+          <include name="launchApplication"/>
+          <include name="executeCleanUpFile"/>
+          <include name="updateResults"/>
+        </methods>
+      </class> <!-- wibmo.app.testScripts.ProfileManagement.KYC_003 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

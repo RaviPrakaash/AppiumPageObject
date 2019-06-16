@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+  <test name="hdfc_Test">
+    <parameter name="pn" value="com.enstage.wibmo.staging.idbi"/>
+    <classes>
+      <class name="wibmo.app.testScripts.Registration.TC_INS_002"/>
+      <class name="wibmo.app.testScripts.Registration.TC_REG_003"/>
+      <class name="wibmo.app.testScripts.Registration.TC_REG_004"/>
+      <class name="wibmo.app.testScripts.Registration.TC_REG_005"/>      
+    </classes>
+  </test> <!-- hdfc_Test -->
+</suite> <!-- Regression -->

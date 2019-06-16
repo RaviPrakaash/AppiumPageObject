@@ -1,0 +1,65 @@
+package wibmo.app.testScripts.AddMoney;
+
+import library.Generic;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import wibmo.app.pagerepo.AddMoney3DSPage;
+import wibmo.app.pagerepo.AddMoneyFinalPage;
+import wibmo.app.pagerepo.AddMoneyPage;
+import wibmo.app.pagerepo.AddMoneySelectCardPage;
+import wibmo.app.pagerepo.AddSendPage;
+import wibmo.app.pagerepo.HomePage;
+import wibmo.app.pagerepo.LoginNewPage;
+import wibmo.app.pagerepo.WelcomePage;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AM_012 Load money using invalid expiry.
+ */
+public class AM_012 extends BaseTest // ==== Load money using invalid expiry ==== //
+{
+	
+	/** The tc. */
+	public String TC=getTestScenario("AM_012");
+	
+	/**
+	 * Am 012.
+	 */
+	@Test
+	public void AM_012() 
+ 	{ 
+		Reporter.log(getTestScenario());
+		int i=0;
+		String data=getTestData("AM_012");
+		String[] values=data.split(",");
+		String loginId=values[i++],securePin=values[i++],amt=values[i++],cardDetails=values[i++],cardPin=values[i++]; 
+		
+		WelcomePage wp=new WelcomePage(driver);
+		wp.selectUser(loginId);
+		
+		LoginNewPage lnp=new LoginNewPage(driver);
+		lnp.login(securePin);
+		
+		Generic.verifyLogin(driver,data);
+		
+		HomePage hp=new HomePage(driver);
+		hp.addSend();
+		
+		AddSendPage asp=new AddSendPage(driver);
+		asp.clickLoadMoney();
+		
+		AddMoneyPage am=new AddMoneyPage(driver);
+		am.enterAmount(amt);			
+		
+		AddMoneySelectCardPage amscp=new AddMoneySelectCardPage(driver);
+		amscp.addMoneyWithNewCard(cardDetails);
+		
+		AddMoney3DSPage am3p=new AddMoney3DSPage(driver);		
+		am3p.addMoney3ds(cardPin);	
+		
+		AddMoneyFinalPage amfp=new AddMoneyFinalPage(driver);
+		amfp.verifyTransactionFailure();				
+ 	}
+}
